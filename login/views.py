@@ -138,3 +138,6 @@ def metadata(request):
     else:
         resp = HttpResponseServerError(content=', '.join(errors))
     return resp
+
+def sso(request):
+    return render(request, 'login/sso.html')
