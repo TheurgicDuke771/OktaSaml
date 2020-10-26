@@ -139,5 +139,6 @@ def metadata(request):
         resp = HttpResponseServerError(content=', '.join(errors))
     return resp
 
-def sso(request):
-    return render(request, 'login/sso.html')
+def home(request):
+    print("This is request : ", request.headers)
+    return render(request, 'login/home.html')
